@@ -18,13 +18,12 @@ jobs:
         with:
           node-version: '18'
 
-       - name: Move to code directory
-        run: cd my-2-percent-webapp
-
       - name: Install dependencies
+        working-directory: ./my-2-percent-webapp
         run: npm install
 
       - name: Build Angular app
+        working-directory: ./my-2-percent-webapp
         run: npm run build --prod
 
       - name: Deploy to S3
