@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '18'
 
+       - name: Move to code directory
+        run: cd my-2-percent-webapp
+
       - name: Install dependencies
         run: npm install
 
